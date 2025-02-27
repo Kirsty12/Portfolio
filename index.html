@@ -31,12 +31,55 @@
         <p>Web Developer | Design | Programmer </p>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container py-5">
-        <h2 class="text-center">About Me</h2>
-        <p class="text-center">I am a self-motivated and driven software developer with a strong passion for web development and digital innovation. With 2 years of hands-on experience in designing, developing, testing, deploying, and maintaining web applications within the NHS, I have skills in various programming languages and frameworks, including HTML, CSS, JavaScript, .NET Framework, C#, Razor Pages, Entity Framework, and SQL. 
-        <br> As a firm believer in continuous improvement, I am eager to enhance my existing skills and quickly adapt to evolving challenges in software development.</p>
-    </section>
+    <!-- About Me Section -->
+<section id="about">
+    <div class="container text-center">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am a self-motivated and driven software developer with a strong passion for web development and digital innovation.
+            With 2 years of hands-on experience in designing, developing, testing, deploying, and maintaining web applications 
+            within the NHS, I have gained expertise in various programming languages and frameworks.
+            <br><br>
+            As a firm believer in continuous improvement, I am always eager to refine my existing skills, 
+            learn new technologies, and challenge myself with new and exciting web development projects.
+        </p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container text-center">
+        <h2>My Skills</h2>
+        <br>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="images/html.png" alt="HTML" />
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <img src="images/css.png" alt="CSS" />
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <img src="images/javascript.png" alt="JavaScript" />
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <img src="images/csharp.png" alt="C#" />
+                <p>C#</p>
+            </div>
+            <div class="skill">
+                <img src="images/dotnet.png" alt=".NET Framework" />
+                <p>.NET</p>
+            </div>
+            <div class="skill">
+                <img src="images/sql.png" alt="SQL" />
+                <p>SQL</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects">
@@ -45,15 +88,36 @@
                 <!-- Project 1 -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/travelguide.png" class="card-img-top" alt="Project 1">
+                        <img src="images/travelguide.png" class="card-img-top" alt="Travel Guide website homescreen">
                         <div class="card-body">
                             <h5 class="card-title">Travel Guide</h5>
                             <p class="card-text">
                                 The World Travel Guide is an interactive website that allows users to explore top holiday destinations and vote for their favourites. 
-                                It was built with HTML, CSS, and JavaScript and enhanced with Bootstrap for responsiveness. The site utilises REST API Integration to fetch real-time country data</li>
+                                It was built with HTML, CSS, and JavaScript and enhanced with Bootstrap for responsiveness. The site utilises REST API Integration to fetch real-time country data.
                             </p>
-                            <a href="projects/travelGuide/index.html" class="btn btn-primary" target="_blank">Live Demo</a>
-                            <a href="https://github.com/Kirsty12/travelGuide" class="btn btn-outline-secondary" target="_blank">GitHub Repo</a>
+                            <div class="card-buttons">
+                                <a href="https://kirsty12.github.io/travelGuide/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a>
+                                <a href="https://github.com/Kirsty12/travelGuide" class="btn btn-outline-secondary btn-sm" target="_blank">GitHub Repo</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/taskManagement.png" class="card-img-top" alt="Task Management Website homescreen">
+                        <div class="card-body">
+                            <h5 class="card-title">Task Management App</h5>
+                            <p class="card-text">
+                                The Task Management app is an ASP.NET Core web application designed to help users organise and manage tasks. 
+                                This application allows users to create, edit, delete, and filter tasks, while also providing a calendar view for better scheduling and planning.
+                                Built with Bootstrap and a responsive design, the application offers a dark mode toggle for enhanced accessibility.
+                            </p>
+                            <div class="card-buttons">
+                                <a href="https://github.com/Kirsty12/TaskManagement" class="btn btn-outline-secondary btn-sm" target="_blank">GitHub Repo</a>
+                            </div>
                             
                         </div>
                     </div>
@@ -62,20 +126,40 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p class="contact-info">This contact form is not currently functioning, but it will be available soon! Stay tuned.</p>
+    <div class="contact-container">
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit">Send Message</button>
         </form>
-    </section>
+    </div>
+</section>
+
 
     <footer>
         <p>&copy; 2025 Kirsty Ratchford</p>
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual submission
+    
+            // Clear the form fields
+            this.reset();
+    
+            // Show success message
+            let responseMessage = document.getElementById("formResponse");
+            responseMessage.textContent = "Thank you but I am not currently processing messages. This feature will be coming soon.";
+            responseMessage.style.color = "green";
+            responseMessage.classList.remove("hidden");
+        });
+    </script>
+
 </body>
 </html>
